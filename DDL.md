@@ -1,5 +1,5 @@
 
-## **Criação de Esquemas e Tabelas em SQL**
+# **Criação de Esquemas e Tabelas em SQL**
 
 A linguagem de definição de dados (DDL, Data Definition Language) no SQL é usada para criar e modificar a estrutura de banco de dados e tabelas. Abaixo estão exemplos de como utilizar os comandos DDL no MySQL, acompanhados do uso da IDE Workbench.
 
@@ -14,7 +14,7 @@ A linguagem de definição de dados (DDL, Data Definition Language) no SQL é us
 - `RENAME TABLE`: para renomear uma tabela existente.
 - `CREATE INDEX`: para melhorar a velocidade de busca/retrieval de dados, os índices podem ser criados em colunas específicas. 
 
-### **Criação do Esquema**
+## `CREATE DATABASE`
 
 O comando `CREATE DATABASE` é utilizado para criar um novo banco de dados. Por exemplo, para criar um banco de dados chamado EMPRESA, utilizamos o seguinte comando SQL:
 
@@ -22,14 +22,118 @@ O comando `CREATE DATABASE` é utilizado para criar um novo banco de dados. Por 
 CREATE DATABASE EMPRESA;
 ```
 
-### **Deletando o Banco**
+## `DROP DATABASE`
 
 Para remover um banco de dados existente, utilizamos o comando `DROP DATABASE`. Este comando deletará o banco de dados EMPRESA e todos os seus dados:
 
 ```sql
 DROP DATABASE EMPRESA;
 ```
+O comando `CREATE TABLE` no SQL é fundamental para a estruturação de bancos de dados relacionais. Ele permite a criação de tabelas para armazenar dados estruturados. Cada tabela é composta por linhas e colunas, onde as colunas definem o tipo de dado (como texto, número, data, entre outros), e as linhas representam os registros individuais que contêm os dados efetivos.
 
+## `CREATE TABLE`
+
+```sql
+CREATE TABLE nome_da_tabela (
+    nome_coluna1 tipo_de_dado1 restricoes,
+    nome_coluna2 tipo_de_dado2 restricoes,
+    ...
+);
+```
+
+- **nome_da_tabela**: O nome que você deseja dar para a tabela no banco de dados.
+- **nome_coluna**: O nome da coluna dentro da tabela.
+- **tipo_de_dado**: O tipo de dado que a coluna irá armazenar, como INT (para números inteiros), VARCHAR (para strings de texto variável), DATE (para datas), entre outros.
+- **restricoes**: Define regras adicionais para os dados da coluna, como NOT NULL (impede valores nulos), UNIQUE (valores únicos), PRIMARY KEY (chave primária), entre outros.
+
+- **Chave Primária (PRIMARY KEY)**: Identificador único para cada registro na tabela. Garante que cada valor na coluna seja único e não nulo.
+- **Restrições de Unicidade (UNIQUE)**: Garante que todos os valores na coluna sejam únicos, evitando duplicatas.
+- **NOT NULL**: Assegura que a coluna não possa ter um valor nulo, ou seja, cada registro deve ter um valor válido para essa coluna.
+
+O comando `CREATE TABLE` é apenas o início da definição da estrutura de um banco de dados. Após criar as tabelas, outros comandos DDL podem ser usados para alterá-las (`ALTER TABLE`), excluí-las (`DROP TABLE`), ou para criar relações entre elas (definindo chaves estrangeiras com `FOREIGN KEY`).
+
+O comando `ALTER TABLE` no SQL é usado para modificar a estrutura de uma tabela existente após sua criação. Esse comando é extremamente versátil e permite uma ampla gama de operações, como adicionar ou remover colunas, mudar o tipo de dado de uma coluna, adicionar ou remover restrições e modificar chaves primárias ou estrangeiras. Essas modificações são essenciais durante o ciclo de vida de um banco de dados para adaptá-lo a mudanças nos requisitos de dados da aplicação.
+
+## `ALTER TABLE`
+
+O comando `ALTER TABLE` pode assumir várias formas, dependendo da operação que você deseja realizar. Aqui estão alguns exemplos das operações mais comuns:
+
+#### Adicionar uma Nova Coluna
+
+```sql
+ALTER TABLE nome_da_tabela
+ADD nome_da_nova_coluna tipo_de_dado restricoes;
+```
+
+#### Remover uma Coluna
+
+```sql
+ALTER TABLE nome_da_tabela
+DROP COLUMN nome_da_coluna;
+```
+
+#### Modificar o Tipo de Dado de uma Coluna
+
+```sql
+ALTER TABLE nome_da_tabela
+MODIFY COLUMN nome_da_coluna novo_tipo_de_dado;
+```
+
+#### Adicionar uma Restrição de Chave Estrangeira
+
+```sql
+ALTER TABLE nome_da_tabela
+ADD CONSTRAINT nome_da_restricao
+FOREIGN KEY (nome_da_coluna) REFERENCES outra_tabela(nome_da_coluna_na_outra_tabela);
+```
+
+#### Adicionar uma Chave Primária
+
+```sql
+ALTER TABLE nome_da_tabela
+ADD PRIMARY KEY (nome_da_coluna);
+```
+
+- O `ALTER TABLE` é um comando poderoso que deve ser usado com cautela, especialmente em tabelas com grandes volumes de dados, pois algumas operações podem ser custosas em termos de processamento e podem impactar o desempenho.
+- Sempre que possível, planeje a estrutura de suas tabelas com antecedência para minimizar a necessidade de usar `ALTER TABLE` extensivamente.
+- Operações de `ALTER TABLE` podem requerer privilégios específicos no banco de dados, dependendo do sistema de gerenciamento de banco de dados (SGBD) que você está utilizando.
+
+O comando `ALTER TABLE` é uma ferramenta essencial para o desenvolvimento e manutenção de um esquema de banco de dados flexível e adaptável às necessidades em constante mudança de uma aplicação.
+
+Os comandos `PRIMARY KEY` e `FOREIGN KEY` são fundamentais na definição de relações entre tabelas em um banco de dados relacional, garantindo a integridade dos dados através de restrições de chave.
+
+## `PRIMARY KEY``
+
+A `PRIMARY KEY` é uma restrição que identifica de forma única cada registro em uma tabela de banco de dados. Cada tabela deve ter uma chave primária, e nenhum valor da chave primária pode ser `NULL`, pois a chave primária é o meio pelo qual as linhas da tabela são identificadas de forma única.
+
+- **Unicidade**: Garante que cada valor na coluna ou conjunto de colunas da chave primária seja único em toda a tabela.
+- **Não nulidade**: Garante que cada registro na tabela tenha um valor na coluna ou conjunto de colunas da chave primária, isto é, não permite valores `NULL`.
+
+#### Exemplo de Uso:
+
+```sql
+CREATE TABLE Funcionario (
+    FuncionarioID INT NOT NULL,
+    Nome VARCHAR(100),
+    Email VARCHAR(100),
+    PRIMARY KEY (FuncionarioID)
+);
+```
+
+Neste exemplo, `FuncionarioID` é definido como a chave primária da tabela `Funcionario`, o que significa que cada funcionário terá um `FuncionarioID` único.
+
+## `FOREIGN KEY`
+
+Uma `FOREIGN KEY` é uma restrição usada para estabelecer uma relação de "chave estrangeira" entre duas tabelas. Ela é uma coluna ou conjunto de colunas que faz referência à chave primária ou a uma chave única de outra tabela. As chaves estrangeiras efetivamente estabelecem uma ligação entre os dados em duas tabelas, garantindo a integridade referencial dos dados.
+
+- **Integridade Referencial**: Garante que as relações entre as tabelas permaneçam consistentes. Ou seja, se uma tabela tem uma chave estrangeira que faz referência a outra tabela, todos os valores da chave estrangeira devem corresponder a um valor existente na tabela referenciada.
+
+- **Chaves Compostas**: Tanto `PRIMARY KEY` quanto `FOREIGN KEY` podem consistir em mais de uma coluna. Quando múltiplas colunas são usadas, elas são conhecidas como chaves compostas.
+- **Ações em Cascata**: Ao definir restrições de chave estrangeira, você pode especificar ações em cascata para atualizações e exclusões, como `CASCADE`, `SET NULL`, ou `NO ACTION`, que determinam o que acontece com as linhas referenciadas quando os dados são alterados ou excluídos na tabela de referência.
+
+O uso adequado de `PRIMARY KEY` e `FOREIGN KEY` não só garante a integridade dos dados dentro de um banco de dados mas também define claramente as relações entre diferentes conjuntos de dados, facilitando a realização de consultas complexas e a manutenção da consistência dos dados.
+
+## Exemplo
 ### **Criação da Tabela FUNCIONARIO**
 
 A tabela FUNCIONARIO armazena informações sobre os funcionários da empresa. O comando `CREATE TABLE` é usado para criar esta tabela dentro do banco de dados EMPRESA, definindo suas colunas e restrições:

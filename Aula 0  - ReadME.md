@@ -10,7 +10,7 @@ Bem-vindos ao repositório da disciplina de Projeto de Banco de Dados, um compon
 
 - **Fundamentos de Banco de Dados**: Entenda os conceitos básicos por trás dos sistemas de banco de dados, incluindo modelos de dados, esquemas, e normalização.
 - **Modelagem de Dados**: Aprenda a criar modelos conceituais, lógicos e físicos usando técnicas de modelagem de dados como ER (Entidade-Relacionamento) e UML (Unified Modeling Language).
-- **SQL: Domine a linguagem SQL para manipulação de bancos de dados relacionais.
+- **SQL:** Domine a linguagem SQL para manipulação de bancos de dados relacionais.
 
 ## Como este repositório está organizado:
 

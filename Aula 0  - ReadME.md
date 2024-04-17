@@ -1,3 +1,7 @@
+
+
+![Projeto de Banco de Dados](https://github.com/Herysson/Projeto-de-Banco-de-Dados/assets/7634437/0b7b880c-574d-4d94-a2a7-9dc421ddfa52)
+
 # Projeto de Banco de Dados
 
 Bem-vindos ao repositório da disciplina de Projeto de Banco de Dados, um componente essencial no mundo da tecnologia da informação. Esta disciplina se dedica a explorar os princípios fundamentais e as técnicas avançadas envolvidas no design, implementação, e gestão de bancos de dados. Nosso objetivo é capacitar os estudantes com o conhecimento e as habilidades necessárias para projetar sistemas de banco de dados eficientes e confiáveis, que são a espinha dorsal de quase todos os aplicativos modernos.

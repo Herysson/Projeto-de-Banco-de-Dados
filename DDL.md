@@ -54,6 +54,75 @@ O comando `CREATE TABLE` é apenas o início da definição da estrutura de um b
 
 O comando `ALTER TABLE` no SQL é usado para modificar a estrutura de uma tabela existente após sua criação. Esse comando é extremamente versátil e permite uma ampla gama de operações, como adicionar ou remover colunas, mudar o tipo de dado de uma coluna, adicionar ou remover restrições e modificar chaves primárias ou estrangeiras. Essas modificações são essenciais durante o ciclo de vida de um banco de dados para adaptá-lo a mudanças nos requisitos de dados da aplicação.
 
+### Tipos de Dados 
+
+Cada coluna em uma tabela de banco de dados deve ter um nome e um tipo de dado.
+
+Um desenvolvedor SQL deve decidir que tipo de dado será armazenado em cada coluna ao criar uma tabela. O tipo de dado é uma orientação para o SQL entender que tipo de dado é esperado em cada coluna, e também identifica como o SQL interagirá com os dados armazenados.
+
+No MySQL, existem três principais tipos de dados: string, numérico e data e hora. 
+
+***Dados do Tipo String***
+
+Descrição dos principais tipos de dados de string suportados pelo MySQL, incluindo detalhes sobre o tamanho e uso de cada tipo.
+
+| Tipo de Dado   | Descrição |
+|----------------|-----------|
+| `CHAR(tamanho)` | Uma string de comprimento fixo (pode conter letras, números e caracteres especiais). O parâmetro `tamanho` especifica o comprimento da coluna em caracteres - pode ser de 0 a 255. O padrão é 1. |
+| `VARCHAR(tamanho)` | Uma string de comprimento variável (pode conter letras, números e caracteres especiais). O parâmetro `tamanho` especifica o comprimento máximo da coluna em caracteres - pode ser de 0 a 65535. |
+| `BINARY(tamanho)` | Equivalente ao `CHAR()`, mas armazena strings de bytes binários. O parâmetro `tamanho` especifica o comprimento da coluna em bytes. O padrão é 1. |
+| `VARBINARY(tamanho)` | Equivalente ao `VARCHAR()`, mas armazena strings de bytes binários. O parâmetro `tamanho` especifica o comprimento máximo da coluna em bytes. |
+| `TINYBLOB` | Para BLOBs (Objetos Binários Grandes). Comprimento máximo: 255 bytes. |
+| `TINYTEXT` | Armazena uma string com comprimento máximo de 255 caracteres. |
+| `TEXT(tamanho)` | Armazena uma string com comprimento máximo de 65,535 bytes. |
+| `BLOB(tamanho)` | Para BLOBs (Objetos Binários Grandes). Armazena até 65,535 bytes de dados. |
+| `MEDIUMTEXT` | Armazena uma string com comprimento máximo de 16,777,215 caracteres. |
+| `MEDIUMBLOB` | Para BLOBs (Objetos Binários Grandes). Armazena até 16,777,215 bytes de dados. |
+| `LONGTEXT` | Armazena uma string com comprimento máximo de 4,294,967,295 caracteres. |
+| `LONGBLOB` | Para BLOBs (Objetos Binários Grandes). Armazena até 4,294,967,295 bytes de dados. |
+| `ENUM(val1, val2, val3, ...)` | Um objeto de string que pode ter apenas um valor, escolhido de uma lista de valores possíveis. Você pode listar até 65535 valores em uma lista ENUM. Se um valor for inserido que não está na lista, um valor em branco será inserido. Os valores são classificados na ordem em que você os insere. |
+| `SET(val1, val2, val3, ...)` | Um objeto de string que pode ter 0 ou mais valores, escolhidos de uma lista de valores possíveis. Você pode listar até 64 valores em uma lista SET. |
+
+***Dados do Tipo Numerico***
+
+# Tipos de Dados Numéricos no MySQL
+
+Descrição dos tipos de dados numéricos suportados pelo MySQL, explicando o intervalo de valores e as especificações de cada tipo.
+
+| Tipo de Dado          | Descrição |
+|-----------------------|-----------|
+| `BIT(tamanho)`        | Tipo de valor de bit. O número de bits por valor é especificado em `tamanho`. O parâmetro `tamanho` pode conter um valor de 1 a 64. O valor padrão para `tamanho` é 1. |
+| `TINYINT(tamanho)`    | Um inteiro muito pequeno. O intervalo com sinal vai de -128 a 127. O intervalo sem sinal vai de 0 a 255. O parâmetro `tamanho` especifica a largura máxima de exibição (que é 255). |
+| `BOOL`                | Zero é considerado como falso, valores não zero são considerados como verdadeiros. |
+| `BOOLEAN`             | Equivalente a `BOOL`. |
+| `SMALLINT(tamanho)`   | Um pequeno inteiro. O intervalo com sinal vai de -32768 a 32767. O intervalo sem sinal vai de 0 a 65535. O parâmetro `tamanho` especifica a largura máxima de exibição (que é 255). |
+| `MEDIUMINT(tamanho)`  | Um inteiro médio. O intervalo com sinal vai de -8388608 a 8388607. O intervalo sem sinal vai de 0 a 16777215. O parâmetro `tamanho` especifica a largura máxima de exibição (que é 255). |
+| `INT(tamanho)`        | Um inteiro médio. O intervalo com sinal vai de -2147483648 a 2147483647. O intervalo sem sinal vai de 0 a 4294967295. O parâmetro `tamanho` especifica a largura máxima de exibição (que é 255). |
+| `INTEGER(tamanho)`    | Equivalente a `INT(tamanho)`. |
+| `BIGINT(tamanho)`     | Um grande inteiro. O intervalo com sinal vai de -9223372036854775808 a 9223372036854775807. O intervalo sem sinal vai de 0 a 18446744073709551615. O parâmetro `tamanho` especifica a largura máxima de exibição (que é 255). |
+| `FLOAT(tamanho, d)`   | Um número de ponto flutuante. O número total de dígitos é especificado em `tamanho`. O número de dígitos após o ponto decimal é especificado no parâmetro `d`. Esta sintaxe está obsoleta no MySQL 8.0.17 e será removida em versões futuras do MySQL. |
+| `FLOAT(p)`            | Um número de ponto flutuante. O MySQL usa o valor `p` para determinar se usa `FLOAT` ou `DOUBLE` para o tipo de dado resultante. Se `p` for de 0 a 24, o tipo de dado se torna `FLOAT()`. Se `p` for de 25 a 53, o tipo de dado se torna `DOUBLE()`. |
+| `DOUBLE(tamanho, d)`  | Um número de ponto flutuante de tamanho normal. O número total de dígitos é especificado em `tamanho`. O número de dígitos após o ponto decimal é especificado no parâmetro `d`. |
+| `DOUBLE PRECISION(tamanho, d)` | Igual a `DOUBLE(tamanho, d)`. |
+| `DECIMAL(tamanho, d)` | Um número de ponto fixo exato. O número total de dígitos é especificado em `tamanho`. O número de dígitos após o ponto decimal é especificado no parâmetro `d`. O número máximo para `tamanho` é 65. O número máximo para `d` é 30. O valor padrão para `tamanho` é 10. O valor padrão para `d` é 0. |
+| `DEC(tamanho, d)`     | Equivalente a `DECIMAL(tamanho,d)`. |
+
+
+***Dados do Tipo Data***
+
+Descrição dos tipos de dados de data e hora suportados pelo MySQL, detalhando o formato e o intervalo de valores suportados.
+
+| Tipo de Dado    | Descrição |
+|-----------------|-----------|
+| `DATE`          | Armazena uma data. Formato: `YYYY-MM-DD`. O intervalo suportado é de '1000-01-01' a '9999-12-31'. |
+| `DATETIME(fsp)` | Combinação de data e hora. Formato: `YYYY-MM-DD hh:mm:ss`. O intervalo suportado é de '1000-01-01 00:00:00' a '9999-12-31 23:59:59'. Adicionando `DEFAULT` e `ON UPDATE` na definição da coluna para obter inicialização automática e atualização para a data e hora atuais. |
+| `TIMESTAMP(fsp)`| Um carimbo de data/hora. Os valores de `TIMESTAMP` são armazenados como o número de segundos desde a época Unix ('1970-01-01 00:00:00' UTC). Formato: `YYYY-MM-DD hh:mm:ss`. O intervalo suportado é de '1970-01-01 00:00:01' UTC a '2038-01-19 03:14:07' UTC. A inicialização automática e atualização para a data e hora atuais podem ser especificadas usando `DEFAULT CURRENT_TIMESTAMP` e `ON UPDATE CURRENT_TIMESTAMP` na definição da coluna. |
+| `TIME(fsp)`     | Armazena um horário. Formato: `hh:mm:ss`. O intervalo suportado é de '-838:59:59' a '838:59:59'. |
+| `YEAR`          | Armazena um ano em formato de quatro dígitos. Valores permitidos no formato de quatro dígitos: de 1901 a 2155, e 0000. O MySQL 8.0 não suporta o formato de ano com dois dígitos. |
+
+Estes tipos de dados são essenciais para o gerenciamento eficaz de informações relacionadas a datas e horários, permitindo uma ampla gama de funcionalidades, desde o agendamento simples até complexas funções de controle temporal em
+
+
 ## `ALTER TABLE`
 
 O comando `ALTER TABLE` pode assumir várias formas, dependendo da operação que você deseja realizar. Aqui estão alguns exemplos das operações mais comuns:
@@ -132,6 +201,7 @@ Uma `FOREIGN KEY` é uma restrição usada para estabelecer uma relação de "ch
 - **Ações em Cascata**: Ao definir restrições de chave estrangeira, você pode especificar ações em cascata para atualizações e exclusões, como `CASCADE`, `SET NULL`, ou `NO ACTION`, que determinam o que acontece com as linhas referenciadas quando os dados são alterados ou excluídos na tabela de referência.
 
 O uso adequado de `PRIMARY KEY` e `FOREIGN KEY` não só garante a integridade dos dados dentro de um banco de dados mas também define claramente as relações entre diferentes conjuntos de dados, facilitando a realização de consultas complexas e a manutenção da consistência dos dados.
+
 
 ## Exemplo
 ### **Criação da Tabela FUNCIONARIO**

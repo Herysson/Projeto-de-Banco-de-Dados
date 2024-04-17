@@ -169,7 +169,7 @@ O comando `ALTER TABLE` é uma ferramenta essencial para o desenvolvimento e man
 
 Os comandos `PRIMARY KEY` e `FOREIGN KEY` são fundamentais na definição de relações entre tabelas em um banco de dados relacional, garantindo a integridade dos dados através de restrições de chave.
 
-## `PRIMARY KEY``
+## `PRIMARY KEY`
 
 A `PRIMARY KEY` é uma restrição que identifica de forma única cada registro em uma tabela de banco de dados. Cada tabela deve ter uma chave primária, e nenhum valor da chave primária pode ser `NULL`, pois a chave primária é o meio pelo qual as linhas da tabela são identificadas de forma única.
 

@@ -17,3 +17,28 @@ Incentivamos a participação ativa de todos através de discussões e contribui
 ## Começando:
 
 Para começar, recomendamos que todos os estudantes façam um clone deste repositório e instalem as ferramentas e softwares necessários listados na seção de pré-requisitos. Isso garantirá que você tenha tudo o que precisa para acompanhar as aulas práticas e trabalhar em seus projetos.
+
+Para baixar e instalar o MySQL Server, MySQL Workbench e o BrModelo, você pode seguir os links fornecidos abaixo, que te direcionarão para as páginas oficiais de download dessas ferramentas:
+
+### Ferramentas
+
+1. **MySQL Server e MySQL Workbench**: Ambos podem ser baixados como parte do MySQL Community Server, que é uma versão gratuita do MySQL. Aqui está como você pode baixar:
+
+   - Acesse o site oficial do MySQL [MySQL Downloads](https://dev.mysql.com/downloads/).
+   - Escolha "MySQL Community (GPL) Downloads".
+   - Selecione "MySQL Community Server".
+   - Na página de download do MySQL Community Server, você encontrará opções para baixar o MySQL Server juntamente com o MySQL Workbench, que faz parte do MySQL Community Installer para Windows. Para outros sistemas operacionais, você pode precisar baixar o Workbench separadamente na seção de [MySQL Workbench Downloads](https://dev.mysql.com/downloads/workbench/).
+
+### BrModelo
+
+2. **BrModelo**: Este é um aplicativo popular para modelagem de dados, especialmente usado em ambientes acadêmicos no Brasil. O BrModelo é gratuito e pode ser baixado diretamente do site do desenvolvedor:
+
+   - Acesse o site do desenvolvedor Carlos Alberto Heuser para baixar o BrModelo diretamente da página de projetos:
+   - [BrModelo - Carlos Heuser](http://www.sis4.com/brModelo/)
+
+### Instruções Adicionais
+
+- Para o **MySQL**, após o download, execute o instalador e siga as instruções para instalar tanto o MySQL Server quanto o MySQL Workbench. Durante a instalação, você poderá escolher os componentes que deseja instalar. Certifique-se de selecionar o MySQL Server para o banco de dados e o MySQL Workbench para a interface gráfica.
+- Para o **BrModelo**, após o download do arquivo, geralmente um arquivo compactado, você precisará descompactá-lo e executar o aplicativo diretamente, uma vez que é uma aplicação Java que não requer instalação tradicional.
+
+Esses links e instruções devem ajudá-lo a configurar seu ambiente de desenvolvimento de banco de dados com MySQL e BrModelo.

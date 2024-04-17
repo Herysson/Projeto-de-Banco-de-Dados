@@ -40,5 +40,3 @@ Para baixar e instalar o MySQL Server, MySQL Workbench e o BrModelo, você pode 
 
 - Para o **MySQL**, após o download, execute o instalador e siga as instruções para instalar tanto o MySQL Server quanto o MySQL Workbench. Durante a instalação, você poderá escolher os componentes que deseja instalar. Certifique-se de selecionar o MySQL Server para o banco de dados e o MySQL Workbench para a interface gráfica.
 - Para o **BrModelo**, após o download do arquivo, geralmente um arquivo compactado, você precisará descompactá-lo e executar o aplicativo diretamente, uma vez que é uma aplicação Java que não requer instalação tradicional.
-
-Esses links e instruções devem ajudá-lo a configurar seu ambiente de desenvolvimento de banco de dados com MySQL e BrModelo.

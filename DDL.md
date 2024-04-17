@@ -85,8 +85,6 @@ Descrição dos principais tipos de dados de string suportados pelo MySQL, inclu
 
 ***Dados do Tipo Numerico***
 
-# Tipos de Dados Numéricos no MySQL
-
 Descrição dos tipos de dados numéricos suportados pelo MySQL, explicando o intervalo de valores e as especificações de cada tipo.
 
 | Tipo de Dado          | Descrição |

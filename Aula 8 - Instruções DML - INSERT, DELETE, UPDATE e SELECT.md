@@ -1,4 +1,19 @@
 
+# Introdução à Linguagem de Manipulação de Dados (DML)
+
+A Linguagem de Manipulação de Dados (DML, Data Manipulation Language) é uma família de sintaxes utilizada em sistemas de gerenciamento de banco de dados SQL para manipular dados dentro de tabelas. Essas operações permitem que os usuários insiram, consultem, atualizem e excluam dados - tarefas essenciais para a manutenção e análise de bases de dados. Diferente da Linguagem de Definição de Dados (DDL), que lida com a estrutura e esquema do banco de dados, a DML foca na manipulação dos dados contidos nas estruturas existentes. Essas operações são cruciais para o dia a dia dos desenvolvedores, analistas de dados e administradores de bancos de dados, pois proporcionam a flexibilidade e o poder necessários para manter os dados precisos e úteis.
+
+- `INSERT`: para inserir novos registros em uma tabela.
+- `UPDATE`: para modificar registros existentes em uma tabela, com base em condições específicas.
+- `DELETE`: para remover registros de uma tabela, com opções para deletar registros específicos ou todos os registros.
+- `SELECT`: para consultar dados de uma tabela, permitindo especificar colunas particulares ou todas as colunas.
+- `WHERE`: para filtrar registros em comandos `SELECT`, `UPDATE`, e `DELETE`, baseando-se em condições definidas.
+- `DISTINCT`: para retornar apenas valores distintos (não duplicados) em uma consulta.
+- `ANY`: para verificar se qualquer valor em um subconjunto atende a uma condição.
+- `ALL`: para verificar se todos os valores em um subconjunto atendem a uma condição.
+- `LIKE`: para buscar registros que correspondam a um padrão especificado.
+- `BETWEEN`: para selecionar registros dentro de um intervalo específico de valores.
+- `ORDER BY`: para ordenar os registros retornados por uma consulta, em ordem ascendente ou descendente.
 
 ## `INSERT`
 O comando `INSERT INTO` é utilizado para adicionar novos registros a uma tabela no MySQL. Há duas maneiras principais de utilizar este comando:
@@ -128,22 +143,23 @@ FROM nome_da_tabela
 WHERE condição;
 ```
 ### **Operadores**
-```markdown
-| Operator | Description                   | Example                           |
-|----------|-------------------------------|-----------------------------------|
-| =        | Equal                         | `WHERE coluna = valor`            |
-| >        | Greater than                  | `WHERE coluna > valor`            |
-| <        | Less than                     | `WHERE coluna < valor`            |
-| >=       | Greater than or equal         | `WHERE coluna >= valor`           |
-| <=       | Less than or equal            | `WHERE coluna <= valor`           |
-| <>       | Not equal. Note: In some versions of SQL, this operator may be written as != | `WHERE coluna <> valor` |
-| BETWEEN  | Between a certain range       | `WHERE coluna BETWEEN valor1 AND valor2` |
-| LIKE     | Search for a pattern          | `WHERE coluna LIKE 'padrão%'`     |
-| IN       | To specify multiple possible values for a column | `WHERE coluna IN (valor1, valor2)` |
-```
+
+| Operador | Descrição                                | Exemplo                                     |
+|----------|------------------------------------------|---------------------------------------------|
+| =        | Igual                                    | `WHERE coluna = valor`                      |
+| >        | Maior que                                | `WHERE coluna > valor`                      |
+| <        | Menor que                                | `WHERE coluna < valor`                      |
+| >=       | Maior ou igual                           | `WHERE coluna >= valor`                     |
+| <=       | Menor ou igual                           | `WHERE coluna <= valor`                     |
+| <>       | Diferente. Obs.: Em algumas versões de SQL, este operador pode ser escrito como != | `WHERE coluna <> valor`   |
+| BETWEEN  | Entre um determinado intervalo           | `WHERE coluna BETWEEN valor1 E valor2`      |
+| LIKE     | Buscar por um padrão                     | `WHERE coluna LIKE 'padrão%'`               |
+| IN       | Para especificar múltiplos valores possíveis para uma coluna | `WHERE coluna IN (valor1, valor2)` |
+
 
 Essa tabela em Markdown organiza claramente os operadores usados na cláusula `WHERE` junto com suas descrições e exemplos de uso prático, tornando-a uma referência útil para qualquer pessoa aprendendo ou revisando SQL.
-## `SELECT DISTINCT`
+
+## `DISTINCT`
 ### **O comando SELECT DISTINCT**
 O comando `SELECT DISTINCT` é usado para retornar apenas valores distintos (diferentes).
 
@@ -210,6 +226,30 @@ FROM nome_da_tabela
 ORDER BY coluna1, coluna2, ... ASC|DESC;
 ```
 
----
+## Referências Recomendadas:
 
-Esta seção abrange os aspectos fundamentais da consulta de dados usando SQL, introduzindo os alunos a técnicas básicas e avançadas para manipulação e filtragem de dados. Se você deseja adicionar mais exemplos práticos ou precisar de ajustes adicionais, estou à disposição para ajudar!
+1. **W3Schools SQL Tutorial**
+   - **URL:** [https://www.w3schools.com/sql/](https://www.w3schools.com/sql/)
+   - **Descrição:** O W3Schools oferece tutoriais abrangentes sobre SQL, cobrindo desde conceitos básicos até recursos avançados, incluindo comandos DDL, DML, e DCL. É um recurso excelente para iniciantes devido à sua abordagem passo a passo e exemplos interativos.
+
+2. **MySQL Official Documentation**
+   - **URL:** [https://dev.mysql.com/doc/](https://dev.mysql.com/doc/)
+   - **Descrição:** A documentação oficial do MySQL é uma fonte inestimável de informações para usuários do MySQL, cobrindo todos os aspectos do banco de dados, desde a instalação até referências avançadas de comandos SQL, incluindo DDL.
+
+3. **PostgreSQL Documentation**
+   - **URL:** [https://www.postgresql.org/docs/](https://www.postgresql.org/docs/)
+   - **Descrição:** Para alunos interessados em PostgreSQL, este recurso oferece uma documentação completa sobre como utilizar SQL no PostgreSQL, incluindo seções detalhadas sobre DDL.
+
+4. **SQLZoo**
+   - **URL:** [https://sqlzoo.net/](https://sqlzoo.net/)
+   - **Descrição:** SQLZoo é uma plataforma interativa de aprendizado que permite aos usuários praticar SQL online. Contém tutoriais e exercícios que cobrem uma vasta gama de tópicos SQL, incluindo comandos DDL.
+
+5. **Stanford University Databases Course**
+   - **URL:** [https://lagunita.stanford.edu/courses/DB/SQL/SelfPaced/about](https://lagunita.stanford.edu/courses/DB/SQL/SelfPaced/about)
+   - **Descrição:** Este curso online gratuito oferecido pela Universidade de Stanford aborda conceitos fundamentais de bancos de dados, com uma boa parte dedicada ao SQL, incluindo comandos DDL. É ideal para estudantes que procuram uma compreensão teórica além das habilidades práticas.
+
+6. **Oracle SQL Documentation**
+   - **URL:** [https://docs.oracle.com/en/database/oracle/oracle-database/](https://docs.oracle.com/en/database/oracle/oracle-database/)
+   - **Descrição:** Para estudantes que trabalham com Oracle Database, esta documentação oferece informações completas sobre SQL e DDL no contexto do Oracle DB.
+
+

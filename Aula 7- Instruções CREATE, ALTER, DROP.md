@@ -1,5 +1,5 @@
 
-# **Criação de Esquemas e Tabelas em SQL**
+# **Linguagem de definição de dados (DDL - Data Definition Language)**
 
 A linguagem de definição de dados (DDL, Data Definition Language) no SQL é usada para criar e modificar a estrutura de banco de dados e tabelas. Abaixo estão exemplos de como utilizar os comandos DDL no MySQL, acompanhados do uso da IDE Workbench.
 

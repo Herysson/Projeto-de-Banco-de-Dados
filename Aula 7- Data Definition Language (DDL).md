@@ -127,7 +127,7 @@ O comando `DROP TABLE` é utilizado para excluir uma tabela existente e todos os
 DROP TABLE table_name;
 ```
 
-## **TRUNCATE TABLE**
+## `TRUNCATE TABLE`
 
 `TRUNCATE TABLE` é usado para deletar todos os dados de uma tabela sem remover a tabela em si. Isso é útil para redefinir tabelas em desenvolvimento ou testes. 
 

@@ -6,12 +6,12 @@ A linguagem de definição de dados (DDL, Data Definition Language) no SQL é us
 - `CREATE DATABASE`: para criar um novo banco de dados.
 - `DROP DATABASE`: para excluir um banco de dados existente.
 - `CREATE TABLE`: para criar novas tabelas dentro de um banco de dados.
-- `ALTER TABLE`: para modificar a estrutura de uma tabela existente, como adicionar uma nova restrição de chave estrangeira.
-- `PRIMARY KEY`: para definir a chave primária de uma tabela.
-- `FOREIGN KEY`: para definir uma chave estrangeira, estabelecendo uma relação entre tabelas.
 - `DROP TABLE`: para excluir uma tabela existente e todos os seus dados.
 - `TRUNCATE TABLE`: para remover todos os registros de uma tabela sem excluir a tabela em si, permitindo a reutilização da estrutura da tabela.
 - `RENAME TABLE`: para renomear uma tabela existente.
+- `ALTER TABLE`: para modificar a estrutura de uma tabela existente, como adicionar uma nova restrição de chave estrangeira.
+- `PRIMARY KEY`: para definir a chave primária de uma tabela.
+- `FOREIGN KEY`: para definir uma chave estrangeira, estabelecendo uma relação entre tabelas.
 - `CREATE INDEX`: para melhorar a velocidade de busca/retrieval de dados, os índices podem ser criados em colunas específicas. 
 
 ## `CREATE DATABASE`
@@ -133,6 +133,13 @@ DROP TABLE table_name;
 
 ```sql
 TRUNCATE TABLE table_name;
+```
+## `RENAME TABLE`
+
+O comando `RENAME TABLE` é utilizado para alterar o nome de uma tabela existente em um banco de dados.
+
+```sql
+RENAME TABLE table_name TO new_table_name;
 ```
 
 ## `ALTER TABLE`

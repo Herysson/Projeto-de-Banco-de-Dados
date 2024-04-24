@@ -120,6 +120,23 @@ Descrição dos tipos de dados de data e hora suportados pelo MySQL, detalhando 
 
 Estes tipos de dados são essenciais para o gerenciamento eficaz de informações relacionadas a datas e horários, permitindo uma ampla gama de funcionalidades, desde o agendamento simples até complexas funções de controle temporal em
 
+### Tipos Restrições - MySQL Constraints
+
+As restrições SQL são usadas para especificar regras para os dados em uma tabela.
+
+Restrições são usadas para limitar o tipo de dados que podem ser inseridos em uma tabela. Isso garante a precisão e a confiabilidade dos dados na tabela. Se houver qualquer violação entre a restrição e a ação de dados, a ação é abortada.
+
+As seguintes restrições são comumente usadas em SQL:
+
+- `NOT NULL` - Garante que uma coluna não possa ter um valor NULL
+- `UNIQUE` - Garante que todos os valores em uma coluna sejam diferentes
+- `PRIMARY KEY` - Uma combinação de `NOT NULL` e `UNIQUE`. Identifica de forma única cada linha em uma tabela
+- `FOREIGN KEY` - Impede ações que destruiriam as ligações entre tabelas
+- `CHECK` - Garante que os valores em uma coluna satisfaçam uma condição específica
+- `DEFAULT` - Define um valor padrão para uma coluna se nenhum valor for especificado
+- `AUTO INCREMENT` - Incrementa automaticamente o valor da coluna para cada nova linha inserida, geralmente usado com chaves primárias
+- `CREATE INDEX` - Usado para criar e recuperar dados do banco de dados muito rapidamente.
+
 ## `DROP TABLE`
 
 O comando `DROP TABLE` é utilizado para excluir uma tabela existente e todos os seus dados do banco de dados. 

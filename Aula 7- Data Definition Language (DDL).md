@@ -7,7 +7,7 @@ A linguagem de definição de dados (DDL, Data Definition Language) no SQL é us
 - `DROP DATABASE`: para excluir um banco de dados existente.
 - `CREATE TABLE`: para criar novas tabelas dentro de um banco de dados.
 - `DROP TABLE`: para excluir uma tabela existente e todos os seus dados.
-- `TRUNCATE TABLE`: para remover todos os registros de uma tabela sem excluir a tabela em si, permitindo a reutilização da estrutura da tabela.
+- `TRUNCATE TABLE`: para remover todos os registros de uma tabela sem excluir a tabela em si.
 - `RENAME TABLE`: para renomear uma tabela existente.
 - `ALTER TABLE`: para modificar a estrutura de uma tabela existente, como adicionar uma nova restrição de chave estrangeira.
 - `PRIMARY KEY`: para definir a chave primária de uma tabela.

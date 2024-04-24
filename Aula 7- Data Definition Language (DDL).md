@@ -120,33 +120,47 @@ Descrição dos tipos de dados de data e hora suportados pelo MySQL, detalhando 
 
 Estes tipos de dados são essenciais para o gerenciamento eficaz de informações relacionadas a datas e horários, permitindo uma ampla gama de funcionalidades, desde o agendamento simples até complexas funções de controle temporal em
 
+## `DROP TABLE`
+
+O comando `DROP TABLE` é utilizado para excluir uma tabela existente e todos os seus dados do banco de dados. 
+```sql
+DROP TABLE table_name;
+```
+
+## **TRUNCATE TABLE**
+
+`TRUNCATE TABLE` é usado para deletar todos os dados de uma tabela sem remover a tabela em si. Isso é útil para redefinir tabelas em desenvolvimento ou testes. 
+
+```sql
+TRUNCATE TABLE table_name;
+```
 
 ## `ALTER TABLE`
 
 O comando `ALTER TABLE` pode assumir várias formas, dependendo da operação que você deseja realizar. Aqui estão alguns exemplos das operações mais comuns:
 
-#### Adicionar uma Nova Coluna
+### Adicionar uma Nova Coluna
 
 ```sql
 ALTER TABLE nome_da_tabela
 ADD nome_da_nova_coluna tipo_de_dado restricoes;
 ```
 
-#### Remover uma Coluna
+### Remover uma Coluna
 
 ```sql
 ALTER TABLE nome_da_tabela
 DROP COLUMN nome_da_coluna;
 ```
 
-#### Modificar o Tipo de Dado de uma Coluna
+### Modificar o Tipo de Dado de uma Coluna
 
 ```sql
 ALTER TABLE nome_da_tabela
 MODIFY COLUMN nome_da_coluna novo_tipo_de_dado;
 ```
 
-#### Adicionar uma Restrição de Chave Estrangeira
+### Adicionar uma Restrição de Chave Estrangeira
 
 ```sql
 ALTER TABLE nome_da_tabela
@@ -154,7 +168,7 @@ ADD CONSTRAINT nome_da_restricao
 FOREIGN KEY (nome_da_coluna) REFERENCES outra_tabela(nome_da_coluna_na_outra_tabela);
 ```
 
-#### Adicionar uma Chave Primária
+### Adicionar uma Chave Primária
 
 ```sql
 ALTER TABLE nome_da_tabela
@@ -176,7 +190,7 @@ A `PRIMARY KEY` é uma restrição que identifica de forma única cada registro 
 - **Unicidade**: Garante que cada valor na coluna ou conjunto de colunas da chave primária seja único em toda a tabela.
 - **Não nulidade**: Garante que cada registro na tabela tenha um valor na coluna ou conjunto de colunas da chave primária, isto é, não permite valores `NULL`.
 
-#### Exemplo de Uso:
+### Exemplo de Uso:
 
 ```sql
 CREATE TABLE Funcionario (
@@ -319,12 +333,21 @@ CREATE TABLE DEPENDENTE(
 );
 ```
 
-### **Deletando uma Tabela (DROP TABLE)**
+## **Deletando uma Tabela (DROP TABLE)**
 
-O comando `DROP TABLE` é utilizado para excluir uma tabela existente e todos os seus dados do banco de dados. Por exemplo, para remover a tabela DEPENDENTE do banco de dados EMPRESA:
+Para remover a tabela DEPENDENTE do banco de dados EMPRESA:
 
 ```sql
 DROP TABLE EMPRESA.DEPENDENTE;
+```
+
+
+## **Esvaziando uma Tabela (TRUNCATE TABLE)**
+
+Ppara apagar todos os registros da tabela TRABALHA_EM:
+
+```sql
+TRUNCATE TABLE EMPRESA.TRABALHA_EM;
 ```
 
 ### **Alterando Estrutura da Tabela (ALTER TABLE)**
@@ -382,7 +405,7 @@ RENAME TABLE EMPRESA.LOCALIZACAO_DEP TO EMPRESA.LOCAL_DEP;
 CREATE INDEX idx_datanasc ON EMPRESA.FUNCIONARIO (Datanasc);
 ```
 
-### Referências Recomendadas:
+## Referências Recomendadas:
 
 1. **W3Schools SQL Tutorial**
    - **URL:** [https://www.w3schools.com/sql/](https://www.w3schools.com/sql/)

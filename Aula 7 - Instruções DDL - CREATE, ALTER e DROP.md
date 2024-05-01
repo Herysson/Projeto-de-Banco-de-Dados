@@ -218,7 +218,7 @@ A `PRIMARY KEY` é uma restrição que identifica de forma única cada registro 
 
 ```sql
 CREATE TABLE Funcionario (
-    FuncionarioID INT NOT NULL,
+    FuncionarioID INT,
     Nome VARCHAR(100),
     Email VARCHAR(100),
     PRIMARY KEY (FuncionarioID)

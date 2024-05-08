@@ -28,10 +28,9 @@ Para baixar e instalar o MySQL Server, MySQL Workbench e o BrModelo, você pode 
 
 1. **MySQL Server e MySQL Workbench**: Ambos podem ser baixados como parte do MySQL Community Server, que é uma versão gratuita do MySQL. Aqui está como você pode baixar:
 
-   - Acesse o site oficial do MySQL [MySQL Downloads](https://dev.mysql.com/downloads/).
-   - Escolha "MySQL Community (GPL) Downloads".
-   - Selecione "MySQL Community Server".
-   - Na página de download do MySQL Community Server, você encontrará opções para baixar o MySQL Server juntamente com o MySQL Workbench, que faz parte do MySQL Community Installer para Windows. Para outros sistemas operacionais, você pode precisar baixar o Workbench separadamente na seção de [MySQL Workbench Downloads](https://dev.mysql.com/downloads/workbench/).
+   - Acesse o site oficial do MySQL [MySQL Downloads](https://www.mysql.com/downloads/).
+   - Escolha "MySQL Community (GPL) Downloads"  [MySQL Downloads](https://dev.mysql.com/downloads/)
+   - Selecione "MySQL Installer for Windows".
 
 ### BrModelo
 

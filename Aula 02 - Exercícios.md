@@ -81,9 +81,9 @@
 
 ![image](https://github.com/user-attachments/assets/d75575eb-7642-44d0-81fd-bf8a0bbc1a01) 
 - **25:** A Figura acima apresenta um DER de um sistema de **recursos humanos**. Descreva tudo que está representado nesse diagrama.  
-- **Exercício 2.26:** Para cada entidade e relacionamento no DER da Figura acima, defina atributos e identificadores, quando possível.  
-- **Exercício 2.27:** No DER da Figura acima, que ações devem ser tomadas ao excluir uma **secretária** do banco de dados? 
-- **Exercício 2.28:** No DER da Figura acima, **secretárias e engenheiros** não podem ser gerentes. Por quê? Como modificar o DER para permitir que secretárias e engenheiros também possam ser gerentes?  
+- **26:** Para cada entidade e relacionamento no DER da Figura acima, defina atributos e identificadores, quando possível.  
+- **27:** No DER da Figura acima, que ações devem ser tomadas ao excluir uma **secretária** do banco de dados? 
+- **28:** No DER da Figura acima, **secretárias e engenheiros** não podem ser gerentes. Por quê? Como modificar o DER para permitir que secretárias e engenheiros também possam ser gerentes?  
 
 ---
 

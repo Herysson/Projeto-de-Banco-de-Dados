@@ -4,10 +4,16 @@ Caros alunos,
 
 Para aprofundarmos o entendimento sobre modelagem de dados, formem grupos de **2 a 3 pessoas** e desenvolvam o **Modelo Entidade-Relacionamento (MER)** para o sistema de controle acadêmico apresentado.  
 
-O modelo deve conter:  
+#### **Etapa 1 – Construção do MER**  
+Cada grupo deve criar um MER contendo:  
 ✅ **Entidades** principais do sistema;  
 ✅ **Relacionamentos** entre as entidades;  
 ✅ **Cardinalidades (mínima e máxima)** para cada relacionamento.  
+
+#### **Etapa 2 – Definição de Atributos e Identificadores**  
+Com base no conhecimento de vocês sobre o contexto acadêmico, expandam o modelo adicionando:  
+✅ **Atributos** relevantes para cada entidade;  
+✅ **Identificadores** (chaves primárias) que garantirão a unicidade dos registros no banco de dados.  
 
 
 ## **Sistema de Controle Acadêmico de uma Universidade Fictícia** 

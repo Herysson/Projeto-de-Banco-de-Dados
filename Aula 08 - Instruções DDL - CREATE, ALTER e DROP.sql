@@ -1,10 +1,12 @@
 -- Cria a database caso ela não exista
-CREATE DATABASE IF NOT EXISTS Biblioteca_aula7;
+CREATE DATABASE IF NOT EXISTS Biblioteca_aula8;
 
 -- Coloca a database em uso
-USE Biblioteca_aula7; 
+USE Biblioteca_aula8; 
 
 -- Tabela AUTOR
+-- OBS: ano_nascimento esta representado como int, 
+-- pois YEAR no MySQL só aceita valores entre 1901 - 2155
 CREATE TABLE Autor (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
@@ -15,7 +17,7 @@ CREATE TABLE Autor (
 CREATE TABLE Livro (
     id INT PRIMARY KEY AUTO_INCREMENT,
     titulo VARCHAR(150) NOT NULL,
-    ano_publicacao YEAR,
+    ano_publicacao INT,
     id_autor INT,
     FOREIGN KEY (id_autor) REFERENCES Autor(id)
 );
@@ -57,7 +59,7 @@ CREATE TABLE Editora (
     nome VARCHAR(100) NOT NULL,
     cidade VARCHAR(50),
     site VARCHAR(100),
-    fundacao YEAR
+    fundacao INT
 );
 
 -- Adicionar a chave estrangeira editora_id na tabela Livro
@@ -77,4 +79,3 @@ MODIFY COLUMN nacionalidade CHAR(2) NOT NULL;
 ALTER TABLE Autor
 ADD CONSTRAINT chk_nascimento
 CHECK (ano_nascimento BETWEEN 1900 AND 2025);
-
